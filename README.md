@@ -104,7 +104,100 @@ Mostrar su respectivo resumen con datos personales y del vuelo
 
 https://lucid.app/lucidchart/2e5553fe-346c-4ab2-9abf-0f1e294bce3e/edit?viewport_loc=-3274%2C610%2C4576%2C2041%2C0_0&invitationId=inv_175d6989-8ed5-49b2-a744-3d936135c23a 
 
+Rubrica de evaluación: 
 
+ 
 
+Insuficiente [1-2,9) 
+
+Basico (3-3,5) 
+
+Bueno [3,5-4) 
+
+Muy bueno [4-4.5) 
+
+Excelente [4,5-5) 
+
+Autoevaluación  
+
+Asistencia y participación 
+
+Faltar a bastantes clases o al ir no participar adecuadamente  
+
+Participar muy poco y/o va a algunas clases llegando de manera puntual a estas  
+
+Participa en clase y asiste de manera puntual a dichas clases 
+
+Participa activamente en las clases y asiste a todas las clases 
+
+Particpa en clase acertivamente, asiste a clases y aparte fuera de las clases pregunta y avanza en dicha entrega 
+
+1.5 
+
+Evidencias 
+
+No presenta los implementos pedidos completos o no todos 
+
+Presenta las evidencias incompletas o de manera desordenada 
+
+Presenta evidencias de manera sosa y sin mucha coherencia  
+
+Presenta la información con algunas incongrenecias con el codigo  
+
+Presenta rubricas, paso a paso, explicación del codigo y demás de manera completa 
+
+3.8 
+
+Codigo 
+
+Codigo incompleto y desorganizado  
+
+Codigo con algunas incongruencias o no cumple con algún parametro 
+
+Codigo completo pero no muy claro en la información pedida  
+
+Codigo completo pero con algunas funciones no muy necesarias o de las vistas 
+
+Codigo completo y organizado con la información clara  
+
+3.8 
+
+Presentación  
+
+Desorganizado el codigo y el repositorio donde la información no es muy clara y concisa  
+
+Desorganizado el codigo o el repositorio de manera que no es muy clara la información  
+
+Organizado el repositorio pero no muy clara la información  
+
+Codigo y repositorio organizados pero no muy claros o con algunas cosas no muy claras 
+
+Presenta el codigo y el repositorio completo de manera ordenada y clara  
+
+3.6 
+
+ 
+
+Explicación del código: 
+
+Este código toma los datos del usuario (nombre, origen, destino, preferencia de asiento, etc.), calcula el precio del vuelo en función de la distancia y el día de la semana, asigna un asiento aleatorio y luego imprime un resumen completo de la reserva. 
+
+Pidiendo datos, variables, parametros y demás como lo son: 
+
+Import random que se encarga de importar de la librería la función random que nos da números aleatorios para funciones de aleatoriedad 
+
+Se piden datos para dar la bienvenida (nombre, apellido, titulo) 
+
+Se definen los parámetros de distancias y las diferencias (medellin, bogota, cartagena) 
+
+Se solicita la ciudad de destino y el origen, también el día de la semana y del mes que se desea viajar 
+
+Se calcula de la diferencia de distancias, ya que de esta variable depende el precio del tiquete, como también la variable según el día de la semana que la persona desea viajar 
+
+Se piden preferencias de asiento según los gustos del usuario y se le asignan parametros a la variable asiento (A, B, Y C) 
+
+Se asigna el asiento según la disponibilidad del vuelo y las preferencias del usuario 
+
+Por último, se imprime un resumen de la reserva del usuario según todo lo pedido y asignado anteriormente (nombre, apellido, titulo, origen, destino, día del vuelo, precio del asiento y asiento asignado) 
 
 ---
