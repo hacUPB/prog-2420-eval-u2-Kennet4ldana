@@ -108,19 +108,19 @@ Rubrica de evaluación:
 
  
 
-Insuficiente [1-2,9) 
+1.Insuficiente [1-2,9) 
 
-Basico (3-3,5) 
+2.Basico (3-3,5) 
 
-Bueno [3,5-4) 
+3.Bueno [3,5-4) 
 
-Muy bueno [4-4.5) 
+4.Muy bueno [4-4.5) 
 
-Excelente [4,5-5) 
+5.Excelente [4,5-5) 
 
 Autoevaluación  
 
-Asistencia y participación 
+*Asistencia y participación*
 
 Faltar a bastantes clases o al ir no participar adecuadamente  
 
@@ -132,9 +132,9 @@ Participa activamente en las clases y asiste a todas las clases
 
 Particpa en clase acertivamente, asiste a clases y aparte fuera de las clases pregunta y avanza en dicha entrega 
 
-1.5 
+Calificación: 1.5 
 
-Evidencias 
+*Evidencias*
 
 No presenta los implementos pedidos completos o no todos 
 
@@ -146,9 +146,9 @@ Presenta la información con algunas incongrenecias con el codigo
 
 Presenta rubricas, paso a paso, explicación del codigo y demás de manera completa 
 
-3.8 
+Calificación: 3.8 
 
-Codigo 
+*Codigo*
 
 Codigo incompleto y desorganizado  
 
@@ -160,9 +160,9 @@ Codigo completo pero con algunas funciones no muy necesarias o de las vistas
 
 Codigo completo y organizado con la información clara  
 
-3.8 
+Calificación: 3.8 
 
-Presentación  
+*Presentación*  
 
 Desorganizado el codigo y el repositorio donde la información no es muy clara y concisa  
 
@@ -174,7 +174,7 @@ Codigo y repositorio organizados pero no muy claros o con algunas cosas no muy c
 
 Presenta el codigo y el repositorio completo de manera ordenada y clara  
 
-3.6 
+Calificación: 3.6 
 
  
 
