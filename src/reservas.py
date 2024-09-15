@@ -1,93 +1,59 @@
 
 import random
 
-# Listas de títulos válidos
-titulos_validos_sr = ["Sr.", "sr.", "Sr", "sr"]
-titulos_validos_sra = ["Sra.", "sra.", "Sra", "sra"]
+def sistema_reservas():
+    titulo = input("¿Es usted señor o señora?: ").capitalize()
+    nombre = input("Introduce tu nombre: ").capitalize()
+    apellido = input("Introduce tu apellido: ").capitalize()
+    print(f"\n{titulo} {nombre} {apellido}, ¡Bienvenido a FastFast Airlines!\n")
+    
+    ciudades = ['Medellin', 'Bogota', 'Cartagena']
+    origen = input("Ingresa tu origen (Medellín, Bogotá, Cartagena): ").capitalize()
+    while origen not in ciudades:
+        origen = input("Por favor, ingresa un origen válido (Medellín, Bogotá, Cartagena): ").capitalize()
+    
+    destino = input("Ingresa tu destino (Medellín, Bogotá, Cartagena): ").capitalize()
+    while destino not in ciudades or destino == origen:
+        if destino == origen:
+            destino = input("El destino no puede ser el mismo que el origen. Ingresa otro destino: ").capitalize()
+        else:
+            destino = input("Por favor, ingresa un destino válido (Medellín, Bogotá, Cartagena): ").capitalize()
+    
+    dia_semana = input("Ingrese el día de la semana (por ejemplo, lunes): ").lower()
+    dia_mes = int(input("Introduzca el día del mes (1-30): "))
+    
+    distancias = {
+        ('Medellin', 'Bogotá'): 240,
+        ('Medellin', 'Cartagena'): 461,
+        ('Bogota', 'Cartagena'): 657
+    }
+    
+    distancia = distancias.get((origen, destino)) or distancias.get((destino, origen))
+    
+    if distancia < 400:
+        if dia_semana in ['lunes', 'martes', 'miércoles', 'jueves']:
+            precio = 79900
+        else:
+            precio = 119900
+    else:
+        if dia_semana in ['lunes', 'martes', 'miércoles', 'jueves']:
+            precio = 156900
+        else:
+            precio = 213000
+    
+    preferencia_asiento = input("¿Prefiere asiento en el pasillo, junto a la ventana, o no tiene preferencia?: ").lower()
+    if preferencia_asiento == 'pasillo':
+        asiento_letra = 'C'
+    elif preferencia_asiento == 'ventana':
+        asiento_letra = 'A'
+    else:
+        asiento_letra = 'B'
+    
+    numero_asiento = random.randint(1, 29)
+    
+    print(f"\nTu vuelo de {origen} a {destino} del {dia_semana} {dia_mes} está reservado.")
+    print(f"Precio del boleto: ${precio:,}")
+    print(f"Tu asiento es: {numero_asiento}{asiento_letra}")
 
-# Pedir el título hasta que sea válido
-titulo = input("Ingrese su título (Sr. o Sra.): ")
-while titulo not in titulos_validos_sr + titulos_validos_sra:
-    print("Título no válido. Por favor, ingrese 'Sr.' o 'Sra.'.")
-    titulo = input("Ingrese su título (Sr. o Sra.): ")
-
-# Pedir el nombre y apellido
-nombre = input("Ingrese su nombre: ")
-apellido = input("Ingrese su apellido: ")
-
-# Determinar y mostrar el mensaje correcto
-if titulo in titulos_validos_sr:
-    print(f"Sr. {nombre} {apellido}, ¡Bienvenido a FastFast Airlines!")
-else:
-    print(f"Sra. {nombre} {apellido}, ¡Bienvenida a FastFast Airlines!")
-
-
-
-distancias = { 
-
-    ("Medellín", "Bogotá"): 240, 
-
-    ("Medellín", "Cartagena"): 461, 
-
-    ("Bogotá", "Cartagena"): 657 
-
-} 
-
-
-origen = input("Seleccione su ciudad de origen (Medellín, Bogotá, Cartagena): ") .lower()
-destino = input("Seleccione su ciudad de destino (Medellín, Bogotá, Cartagena): ") 
-dia_semana = input("Ingrese el día de la semana en que desea viajar (por ejemplo, lunes): ").lower() 
-dia_mes = int(input("Ingrese el día del mes en que desea viajar (1-30): ")) 
-
-
-distancia = distancias.get((origen, destino)) or distancias.get((destino, origen))
-print(distancia)
-
-if distancia < 400: 
-
-    if dia_semana in ["lunes", "martes", "miércoles", "jueves"]: 
-
-        precio = 79900 
-
-    else: 
-
-        precio = 119900 
-
-else: 
-
-    if dia_semana in ["lunes", "martes", "miércoles", "jueves"]: 
-
-        precio = 156900 
-
-    else: 
-
-        precio = 213000
-
-
-preferencia_asiento = input("¿Prefiere un asiento en el pasillo, junto a la ventana o sin preferencia? ").lower() 
-  
-
-if preferencia_asiento == "pasillo": 
-
-    letra_asiento = "C" 
-
-elif preferencia_asiento == "ventana": 
-
-    letra_asiento = "A" 
-
-else: 
-
-    letra_asiento = "B" 
-
-
-numero_asiento = random.randint(1, 29) 
-
-asiento = f"{numero_asiento}{letra_asiento}" 
-
-print("\nResumen de su reserva:") 
-print(f"Nombre: {titulo} {nombre} {apellido}") 
-print(f"Origen: {origen}") 
-print(f"Destino: {destino}") 
-print(f"Fecha de vuelo: {dia_semana.capitalize()}, {dia_mes}") 
-print(f"Precio del boleto: ${precio:,}") 
-print(f"Asiento asignado: {asiento}") 
+if __name__ == "__main__":
+    sistema_reservas()
