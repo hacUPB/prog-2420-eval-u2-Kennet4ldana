@@ -208,6 +208,8 @@ Por último, se imprime un resumen de la reserva del usuario según todo lo pedi
 
 PROBLEMA 2 
 
+*Paso a paso* 
+
 Paso 1: Solicitar los datos de entrada al usuario 
 
 Pedir al usuario que ingrese la altitud inicial del satélite. 
