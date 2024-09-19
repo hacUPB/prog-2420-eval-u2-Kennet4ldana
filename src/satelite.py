@@ -26,4 +26,9 @@ def simular_desintegracion_orbital():
         
 if __name__ == "__main__":
     simular_desintegracion_orbital()
+
+
+    :+  :+  :+
+
+
     
